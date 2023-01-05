@@ -2,4 +2,5 @@ def main():
     print("executing entry point for dundie")
 
 
-main()
+if __name__ == "__main__":
+    main()
