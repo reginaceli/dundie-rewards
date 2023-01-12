@@ -1,1 +1,1 @@
-print("initializing dundie")
+print("init dundie")
