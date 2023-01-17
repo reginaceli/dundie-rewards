@@ -1,4 +1,4 @@
-.PHONY: install virtualenv clean
+.PHONY: install virtualenv ipython test clean 
 
 install:
 	@echo "Installing for dev environment"
@@ -8,6 +8,14 @@ install:
 virtualenv:
 	@.venv/bin/python -m pip -m venv .venv
 
+
+ipython:
+	@.venv/bin/python 	
+
+
+test:
+	@.venv/bin/pytest -vv -s tests/
+	
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;

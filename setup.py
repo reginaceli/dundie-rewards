@@ -9,6 +9,9 @@ def read(*paths):
     rootpath = os.path.dirname(__file__)
     filepath = os.path.join(rootpath, *paths)
 
+    print('root', rootpath)
+    print('filep', filepath)
+
     with open(filepath) as file_:
         return file_.read().strip()
 
