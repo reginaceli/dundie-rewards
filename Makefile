@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython test clean 
+.PHONY: install virtualenv ipython test watch clean 
 
 install:
 	@echo "Installing for dev environment"
@@ -14,7 +14,11 @@ ipython:
 
 
 test:
-	@.venv/bin/pytest -vv -s tests/
+	@.venv/bin/pytest -s
+
+watch:
+	# @.venv/bin/ptw 
+	@ls **/*.py | entr pytest
 	
 
 clean:            ## Clean unused files.
