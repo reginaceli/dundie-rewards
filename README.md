@@ -8,3 +8,20 @@ Michael, o gerente da empresa quer aumentar a motivação dos funcionários ofer
 O funcionário pode uma vez a cada ano resgatar seus pontos em um cartão de crédito para gastar onde quiserem.
 
 Acordamos em contrato que o MVP (Minimum Viable Product) será uma versão para ser executada no terminal e que no futuro terá também as interfaces UI, web e API.
+
+
+## Installation
+
+```py
+pip install  name-dundie
+```
+
+```py
+pip install -e .[dev]
+```
+
+## Usage
+
+```py
+dundie load assets/people.csv
+```
