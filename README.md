@@ -1,3 +1,5 @@
+[![CI](https://github.com/reginaceli/dundie-rewards/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/reginaceli/dundie-rewards/actions/workflows/main.yml)
+
 # Projeto Dundie Rewards
 
 
