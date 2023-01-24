@@ -33,6 +33,7 @@ setup(
     long_description=("README.md"),
     long_description_content_type="text/markdown",
     author="Regina Celi da Silva",
+    python_requires=">=3.8",
     packages=find_packages(),
     entry_points={
         "console_scripts": [
