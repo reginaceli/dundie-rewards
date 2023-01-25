@@ -2,14 +2,13 @@
 
 # Projeto Dundie Rewards
 
+We were hired by Dunder Mifflin, large paper manufacturer to develop a reward system for its employees.
 
-Nós fomos contratados pela Dunder Mifflin, grande fabricante de papéis para desenvolver um sistema de recompensas para seus colaboradores.
+Michael, the company's manager wants to increase employee motivation by offer a points system that employess can accumulate according to their goals achieved, bonuses offered by the manager and the employees can be also exchange point among themselves.
 
-Michael, o gerente da empresa quer aumentar a motivação dos funcionários oferecendo um sistema de pontos que os funcionários podem acumular de acordo com as suas metas atingidas, bonus oferecidos pelo gerente e os funcionários podem também trocam pontos entre sí.
+Once one year, employees can redeem their points on a credit card to spend wherever they want.
 
-O funcionário pode uma vez a cada ano resgatar seus pontos em um cartão de crédito para gastar onde quiserem.
-
-Acordamos em contrato que o MVP (Minimum Viable Product) será uma versão para ser executada no terminal e que no futuro terá também as interfaces UI, web e API.
+We agreed in a contract that the MVP (Minimum Viable Product) will be a version to be executed in the terminal and that in the future it will also have the UI, web and API interfaces.
 
 
 ## Installation
