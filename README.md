@@ -1,6 +1,6 @@
 [![CI](https://github.com/reginaceli/dundie-rewards/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/reginaceli/dundie-rewards/actions/workflows/main.yml)
 
-# Projeto Dundie Rewards
+# Project Dundie Rewards
 
 We were hired by Dunder Mifflin, large paper manufacturer to develop a reward system for its employees.
 
