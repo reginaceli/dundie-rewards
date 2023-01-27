@@ -4,26 +4,19 @@ install:
 	@echo "Installing for dev environment"
 	@.venv/bin/python -m pip install -e .[dev]
 
-
 virtualenv:
 	@.venv/bin/python -m pip -m venv .venv
-
 
 ipython:
 	@.venv/bin/python 	
 
-
 test:
 	@.venv/bin/pytest -s
-
-testci:
-	@pytest -v --junitxml=test-result.xml
 
 watch:
 	# @.venv/bin/ptw 
 	@ls **/*.py | entr pytest
 	
-
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
 	@find ./ -name '__pycache__' -exec rm -rf {} \;
