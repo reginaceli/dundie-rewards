@@ -19,7 +19,12 @@ def main():
         default="help",
     )
 
-    parser.add_argument("filepath", help="File path to load", type=str, default=None)
+    parser.add_argument(
+        "filepath",
+        help="File path to load",
+        type=str,
+        default=None,
+    )
 
     args = parser.parse_args()
 
