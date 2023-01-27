@@ -14,7 +14,7 @@ lint:
 	@.venv/bin/pflake8
 
 fmt:
-	@.venv/bin/isort --profile=black -m 3 dundie tests integration
+	@.venv/bin/isort dundie tests integration
 	@.venv/bin/black dundie tests integration
 
 test:
