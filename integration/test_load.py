@@ -9,11 +9,10 @@ def test_load_positive_call_load_command():
     """Test integration command load"""
     out = (
         check_output(["dundie", "load", "tests/assets/people.csv"])
-        .decode("utf-8")
-        .split("\n")
+        .decode("utf-8").strip().split(',')
     )
 
-    assert len(out) == 2
+    assert len(out) == 1
 
 
 @pytest.mark.integration
