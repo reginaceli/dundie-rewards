@@ -6,8 +6,6 @@ medium: Medium priority
 low: Low priority
 """
 
-# hook
-
 
 def pytest_configure(config):
     for line in MARKER.split("\n"):
