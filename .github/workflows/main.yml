@@ -47,7 +47,4 @@ jobs:
         run: pip install .[test]
       - name: Run tests
         run:  pytest -v --junitxml=test-result.xml
-        if: always()
-        with:
-          files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
+       
