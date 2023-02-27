@@ -1,41 +1,46 @@
-import argparse
+import pkg_resources
+import rich_click as click
+from rich.table import Table
+from rich.console import Console
 
-from dundie.core import load
+from dundie import core
 
 
+click.rich_click.USE_RICH_MARKUP = True
+click.rich_click.USE_MARKDOWN = True
+click.rich_click.SHOW_ARGUMENTS = True
+click.rich_click.GROUP_ARGUMENTS_OPTIONS = True
+click.rich_click.SHOW_METAVARS_COLUMN = False
+click.rich_click.APPEND_METAVARS_HELP = True
+
+
+@click.group()
+@click.version_option(pkg_resources.get_distribution("dundie").version)
 def main():
-    """Entry point to application"""
+    """(Entry point)Dunder Mifflin rewards system \n.
 
-    parser = argparse.ArgumentParser(
-        description="Dunder Mifflin system rewards CLI",
-        epilog="Enjoy and use with cautious.",
-    )
+    This cli application controls DM rewards.
+    """
 
-    parser.add_argument(
-        "subcommand",
-        help="Subcommando to run",
-        type=str,
-        choices=("load", "show", "send"),
-        default="help",
-    )
 
-    parser.add_argument(
-        "filepath",
-        help="File path to load",
-        type=str,
-        default=None,
-    )
+@main.command()
+@click.argument("filepath", type=click.Path(exists=True))
+def load(filepath):
+    """Loads the file to the database
 
-    args = parser.parse_args()
+    - validades data
+    - parses the file
+    - loads to data base
+    """
+    table = Table(title="Dunder Mifflin Associates")
+    headers = ["name", "dept", "role", "e-mail"]
+    result = core.load(filepath)
 
-    # print(*globals()[args.subcommand](args.filepath))
+    for header in headers:
+        table.add_column(header, style="magenta")
 
-    if args.subcommand == "load":
-        result = load(args.filepath)
-        header = ["name", "dept", "role", "email"]
+    for person in result:
+        table.add_row(*[field.strip() for field in person.split(",")])
 
-        for person in result:
-            print("-" * 50)
-
-            for key, value in zip(header, person.split(",")):
-                print(f"{key}-> {value.strip()}")
+    console = Console()
+    console.print(table)
