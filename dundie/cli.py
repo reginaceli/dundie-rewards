@@ -28,6 +28,7 @@ def main():
 def load(filepath):
     """Loads the file to the database
 
+    ## Features
     - validades data
     - parses the file
     - loads to data base

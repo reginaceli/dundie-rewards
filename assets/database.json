@@ -1,0 +1,14 @@
+{
+    "people":{
+      "jim@dundlermifflin.com":{
+          "name": "Jim Halpert",
+          "role": "Salesman",
+          "dept": "Sales",
+          "active": true,
+          "chave-primaria": "email"
+      }  
+    },
+    "balance":{},
+    "movement":{},
+    "user":{}
+}
