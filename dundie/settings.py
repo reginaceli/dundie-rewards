@@ -1,0 +1,3 @@
+SMTP_HOST = "localhost"
+SMPT_PORT = 8025
+SMPT_TIMEOUT = 5
